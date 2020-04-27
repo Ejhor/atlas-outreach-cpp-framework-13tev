@@ -9,10 +9,10 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
 {
   // path to your local directory *or* URL, please change the default one!
   /* Local path example */
-  //TString path = "/eos/project/a/atlas-outreach/projects/open-data/OpenDataTuples/renamedLargeRJets/1largeRjet1lep/";
+  TString path = "/home/jovyan/1largeRjet1lep/";
 
   /* The URL to the ATLAS Open Data website repository */
-  TString path = "https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/1largeRjet1lep/";
+//   TString path = "https://atlas-opendata.web.cern.ch/atlas-opendata/samples/2020/1largeRjet1lep/";
 
   //***************************************************************************************************//
   // adding chains of all MC and data samples
@@ -144,7 +144,7 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
 
   } // option 2
 
- 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
   if (option == 3 || option==0)   {
     
     TChain* chain_Wmunu_PTV0_70_CVetoBVeto = new TChain("mini");
@@ -171,25 +171,6 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
     TChain* chain_Wenu_PTV140_280_CFilterBVeto = new TChain("mini");
     TChain* chain_Wenu_PTV140_280_BFilter = new TChain("mini");
     TChain* chain_Wenu_PTV280_500_CVetoBVeto = new TChain("mini");
-    TChain* chain_Wenu_PTV280_500_CFilterBVeto = new TChain("mini");
-    TChain* chain_Wenu_PTV280_500_BFilter = new TChain("mini");
-    TChain* chain_Wenu_PTV500_1000 = new TChain("mini");
-    TChain* chain_Wenu_PTV1000_E_CMS = new TChain("mini");
-    TChain* chain_Wtaunu_PTV0_70_CVetoBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV0_70_CFilterBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV0_70_BFilter = new TChain("mini");
-    TChain* chain_Wtaunu_PTV70_140_CVetoBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV70_140_CFilterBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV70_140_BFilter = new TChain("mini");
-    TChain* chain_Wtaunu_PTV140_280_CVetoBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV140_280_CFilterBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV140_280_BFilter = new TChain("mini");
-    TChain* chain_Wtaunu_PTV280_500_CVetoBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV280_500_CFilterBVeto = new TChain("mini");
-    TChain* chain_Wtaunu_PTV280_500_BFilter = new TChain("mini");
-    TChain* chain_Wtaunu_PTV500_1000 = new TChain("mini");
-    TChain* chain_Wtaunu_PTV1000_E_CM = new TChain("mini");
-    
     
     chain_Wmunu_PTV0_70_CVetoBVeto->AddFile(path+"MC/mc_364156.Wmunu_PTV0_70_CVetoBVeto.1largeRjet1lep.root");
     chain_Wmunu_PTV0_70_CFilterBVeto->AddFile(path+"MC/mc_364157.Wmunu_PTV0_70_CFilterBVeto.1largeRjet1lep.root");
@@ -215,24 +196,6 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
     chain_Wenu_PTV140_280_CFilterBVeto->AddFile(path+"MC/mc_364177.Wenu_PTV140_280_CFilterBVeto.1largeRjet1lep.root");
     chain_Wenu_PTV140_280_BFilter->AddFile(path+"MC/mc_364178.Wenu_PTV140_280_BFilter.1largeRjet1lep.root");
     chain_Wenu_PTV280_500_CVetoBVeto->AddFile(path+"MC/mc_364179.Wenu_PTV280_500_CVetoBVeto.1largeRjet1lep.root");
-    chain_Wenu_PTV280_500_CFilterBVeto->AddFile(path+"MC/mc_364180.Wenu_PTV280_500_CFilterBVeto.1largeRjet1lep.root");
-    chain_Wenu_PTV280_500_BFilter->AddFile(path+"MC/mc_364181.Wenu_PTV280_500_BFilter.1largeRjet1lep.root");
-    chain_Wenu_PTV500_1000->AddFile(path+"MC/mc_364182.Wenu_PTV500_1000.1largeRjet1lep.root");
-    chain_Wenu_PTV1000_E_CMS->AddFile(path+"MC/mc_364183.Wenu_PTV1000_E_CMS.1largeRjet1lep.root");
-    chain_Wtaunu_PTV0_70_CVetoBVeto->AddFile(path+"MC/mc_364184.Wtaunu_PTV0_70_CVetoBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV0_70_CFilterBVeto->AddFile(path+"MC/mc_364185.Wtaunu_PTV0_70_CFilterBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV0_70_BFilter->AddFile(path+"MC/mc_364186.Wtaunu_PTV0_70_BFilter.1largeRjet1lep.root");
-    chain_Wtaunu_PTV70_140_CVetoBVeto->AddFile(path+"MC/mc_364187.Wtaunu_PTV70_140_CVetoBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV70_140_CFilterBVeto->AddFile(path+"MC/mc_364188.Wtaunu_PTV70_140_CFilterBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV70_140_BFilter->AddFile(path+"MC/mc_364189.Wtaunu_PTV70_140_BFilter.1largeRjet1lep.root");
-    chain_Wtaunu_PTV140_280_CVetoBVeto->AddFile(path+"MC/mc_364190.Wtaunu_PTV140_280_CVetoBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV140_280_CFilterBVeto->AddFile(path+"MC/mc_364191.Wtaunu_PTV140_280_CFilterBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV140_280_BFilter->AddFile(path+"MC/mc_364192.Wtaunu_PTV140_280_BFilter.1largeRjet1lep.root");
-    chain_Wtaunu_PTV280_500_CVetoBVeto->AddFile(path+"MC/mc_364193.Wtaunu_PTV280_500_CVetoBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV280_500_CFilterBVeto->AddFile(path+"MC/mc_364194.Wtaunu_PTV280_500_CFilterBVeto.1largeRjet1lep.root");
-    chain_Wtaunu_PTV280_500_BFilter->AddFile(path+"MC/mc_364195.Wtaunu_PTV280_500_BFilter.1largeRjet1lep.root");
-    chain_Wtaunu_PTV500_1000->AddFile(path+"MC/mc_364196.Wtaunu_PTV500_1000.1largeRjet1lep.root");
-    chain_Wtaunu_PTV1000_E_CM->AddFile(path+"MC/mc_364197.Wtaunu_PTV1000_E_CMS.1largeRjet1lep.root");
     
     
     if (proof == 1) {
@@ -260,24 +223,6 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
       chain_Wenu_PTV140_280_CFilterBVeto->SetProof();
       chain_Wenu_PTV140_280_BFilter->SetProof();
       chain_Wenu_PTV280_500_CVetoBVeto->SetProof();
-      chain_Wenu_PTV280_500_CFilterBVeto->SetProof();
-      chain_Wenu_PTV280_500_BFilter->SetProof();
-      chain_Wenu_PTV500_1000->SetProof();
-      chain_Wenu_PTV1000_E_CMS->SetProof();
-      chain_Wtaunu_PTV0_70_CVetoBVeto->SetProof();
-      chain_Wtaunu_PTV0_70_CFilterBVeto->SetProof();
-      chain_Wtaunu_PTV0_70_BFilter->SetProof();
-      chain_Wtaunu_PTV70_140_CVetoBVeto->SetProof();
-      chain_Wtaunu_PTV70_140_CFilterBVeto->SetProof();
-      chain_Wtaunu_PTV70_140_BFilter->SetProof();
-      chain_Wtaunu_PTV140_280_CVetoBVeto->SetProof();
-      chain_Wtaunu_PTV140_280_CFilterBVeto->SetProof();
-      chain_Wtaunu_PTV140_280_BFilter->SetProof();
-      chain_Wtaunu_PTV280_500_CVetoBVeto->SetProof();
-      chain_Wtaunu_PTV280_500_CFilterBVeto->SetProof();
-      chain_Wtaunu_PTV280_500_BFilter->SetProof();
-      chain_Wtaunu_PTV500_1000->SetProof();
-      chain_Wtaunu_PTV1000_E_CM->SetProof();
     } // option proof
     
     
@@ -315,6 +260,80 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
       chain_Wenu_PTV140_280_CFilterBVeto->Process("ZPrimeBoostedAnalysis.C+","Wenu_PTV140_280_CFilterBVeto");
       chain_Wenu_PTV140_280_BFilter->Process("ZPrimeBoostedAnalysis.C+","Wenu_PTV140_280_BFilter");
       chain_Wenu_PTV280_500_CVetoBVeto->Process("ZPrimeBoostedAnalysis.C+","Wenu_PTV280_500_CVetoBVeto");
+    
+    
+  } // W+jets Sherpa
+
+
+  
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
+    
+    if (option == 4 || option==0)   {
+
+    TChain* chain_Wenu_PTV280_500_CFilterBVeto = new TChain("mini");
+    TChain* chain_Wenu_PTV280_500_BFilter = new TChain("mini");
+    TChain* chain_Wenu_PTV500_1000 = new TChain("mini");
+    TChain* chain_Wenu_PTV1000_E_CMS = new TChain("mini");
+    TChain* chain_Wtaunu_PTV0_70_CVetoBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV0_70_CFilterBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV0_70_BFilter = new TChain("mini");
+    TChain* chain_Wtaunu_PTV70_140_CVetoBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV70_140_CFilterBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV70_140_BFilter = new TChain("mini");
+    TChain* chain_Wtaunu_PTV140_280_CVetoBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV140_280_CFilterBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV140_280_BFilter = new TChain("mini");
+    TChain* chain_Wtaunu_PTV280_500_CVetoBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV280_500_CFilterBVeto = new TChain("mini");
+    TChain* chain_Wtaunu_PTV280_500_BFilter = new TChain("mini");
+    TChain* chain_Wtaunu_PTV500_1000 = new TChain("mini");
+    TChain* chain_Wtaunu_PTV1000_E_CM = new TChain("mini");
+    
+    
+    chain_Wenu_PTV280_500_CFilterBVeto->AddFile(path+"MC/mc_364180.Wenu_PTV280_500_CFilterBVeto.1largeRjet1lep.root");
+    chain_Wenu_PTV280_500_BFilter->AddFile(path+"MC/mc_364181.Wenu_PTV280_500_BFilter.1largeRjet1lep.root");
+    chain_Wenu_PTV500_1000->AddFile(path+"MC/mc_364182.Wenu_PTV500_1000.1largeRjet1lep.root");
+    chain_Wenu_PTV1000_E_CMS->AddFile(path+"MC/mc_364183.Wenu_PTV1000_E_CMS.1largeRjet1lep.root");
+    chain_Wtaunu_PTV0_70_CVetoBVeto->AddFile(path+"MC/mc_364184.Wtaunu_PTV0_70_CVetoBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV0_70_CFilterBVeto->AddFile(path+"MC/mc_364185.Wtaunu_PTV0_70_CFilterBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV0_70_BFilter->AddFile(path+"MC/mc_364186.Wtaunu_PTV0_70_BFilter.1largeRjet1lep.root");
+    chain_Wtaunu_PTV70_140_CVetoBVeto->AddFile(path+"MC/mc_364187.Wtaunu_PTV70_140_CVetoBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV70_140_CFilterBVeto->AddFile(path+"MC/mc_364188.Wtaunu_PTV70_140_CFilterBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV70_140_BFilter->AddFile(path+"MC/mc_364189.Wtaunu_PTV70_140_BFilter.1largeRjet1lep.root");
+    chain_Wtaunu_PTV140_280_CVetoBVeto->AddFile(path+"MC/mc_364190.Wtaunu_PTV140_280_CVetoBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV140_280_CFilterBVeto->AddFile(path+"MC/mc_364191.Wtaunu_PTV140_280_CFilterBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV140_280_BFilter->AddFile(path+"MC/mc_364192.Wtaunu_PTV140_280_BFilter.1largeRjet1lep.root");
+    chain_Wtaunu_PTV280_500_CVetoBVeto->AddFile(path+"MC/mc_364193.Wtaunu_PTV280_500_CVetoBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV280_500_CFilterBVeto->AddFile(path+"MC/mc_364194.Wtaunu_PTV280_500_CFilterBVeto.1largeRjet1lep.root");
+    chain_Wtaunu_PTV280_500_BFilter->AddFile(path+"MC/mc_364195.Wtaunu_PTV280_500_BFilter.1largeRjet1lep.root");
+    chain_Wtaunu_PTV500_1000->AddFile(path+"MC/mc_364196.Wtaunu_PTV500_1000.1largeRjet1lep.root");
+    chain_Wtaunu_PTV1000_E_CM->AddFile(path+"MC/mc_364197.Wtaunu_PTV1000_E_CMS.1largeRjet1lep.root");
+    
+    
+    if (proof == 1) {
+      chain_Wenu_PTV280_500_CFilterBVeto->SetProof();
+      chain_Wenu_PTV280_500_BFilter->SetProof();
+      chain_Wenu_PTV500_1000->SetProof();
+      chain_Wenu_PTV1000_E_CMS->SetProof();
+      chain_Wtaunu_PTV0_70_CVetoBVeto->SetProof();
+      chain_Wtaunu_PTV0_70_CFilterBVeto->SetProof();
+      chain_Wtaunu_PTV0_70_BFilter->SetProof();
+      chain_Wtaunu_PTV70_140_CVetoBVeto->SetProof();
+      chain_Wtaunu_PTV70_140_CFilterBVeto->SetProof();
+      chain_Wtaunu_PTV70_140_BFilter->SetProof();
+      chain_Wtaunu_PTV140_280_CVetoBVeto->SetProof();
+      chain_Wtaunu_PTV140_280_CFilterBVeto->SetProof();
+      chain_Wtaunu_PTV140_280_BFilter->SetProof();
+      chain_Wtaunu_PTV280_500_CVetoBVeto->SetProof();
+      chain_Wtaunu_PTV280_500_CFilterBVeto->SetProof();
+      chain_Wtaunu_PTV280_500_BFilter->SetProof();
+      chain_Wtaunu_PTV500_1000->SetProof();
+      chain_Wtaunu_PTV1000_E_CM->SetProof();
+    } // option proof
+    
+    
+    
+    
       chain_Wenu_PTV280_500_CFilterBVeto->Process("ZPrimeBoostedAnalysis.C+","Wenu_PTV280_500_CFilterBVeto");
       chain_Wenu_PTV280_500_BFilter->Process("ZPrimeBoostedAnalysis.C+","Wenu_PTV280_500_BFilter");
       chain_Wenu_PTV500_1000->Process("ZPrimeBoostedAnalysis.C+","Wenu_PTV500_1000");
@@ -339,8 +358,5 @@ void main_ZPrimeBoostedAnalysis(int proof = 0, int option= 0)
     
     
   } // W+jets Sherpa
-
-
-    
 
 }

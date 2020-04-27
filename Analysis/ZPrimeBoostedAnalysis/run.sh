@@ -7,7 +7,7 @@ echo Which option should I run?
 echo Options are:
 echo 0 = run all data and MC one after another
 echo 1 = run data only 
-echo 2,3 = run MC samples only 
+echo 2,3,4 = run MC samples only 
 read varname
 echo Option is $varname
 option=$varname
