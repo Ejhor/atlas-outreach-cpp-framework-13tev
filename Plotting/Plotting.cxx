@@ -54,10 +54,10 @@
 #define DEBUG 0
 
 // yields flag, set to 1 top print data and MC yields
-#define YIELDS 0
+#define YIELDS 1
 
 // normalised signal flag, set to 1 to add normalised signal to the plots (can be used for Higgs, SingleTop, ZPrime, SUSY)
-#define NORMSIG 0
+#define NORMSIG 1
 
 // save to pdf flag, by default plots saved as png
 #define SAVEPDF 0

@@ -295,12 +295,12 @@ Bool_t ZPrimeBoostedAnalysis::Process(Long64_t entry)
 				      // fill histograms	  
 				      double names_of_global_variable[]={met_et/1000., mtw/1000.};
 				      
-				      double names_of_leadlep_variable[]={Lepton_1.Pt()/1000., Lepton_1.Eta(), Lepton_1.E()/1000., Lepton_1.Phi(), (double)lep_charge->at(goodlep_index), (double)lep_type->at(goodlep_index)};
+				      double names_of_leadlep_variable[]={Lepton_1.Pt()/1000., Lepton_1.Eta(), Lepton_1.E()/1000., Lepton_1.Phi(), (double)lep_charge->at(goodlep_index), (double)lep_type->at(goodlep_index), (double)lep_z0->at(goodlep_index), (double)lep_trackd0pvunbiased->at(goodlep_index)};
 				      
 				      double names_of_jet_variable[]={(double)goodjet_afterdRlep_n, goodsmallRjet.Pt()/1000., goodsmallRjet.Eta(), (double)goodbjet_n, jet_pt->at(goodbjet_index[0])/1000.,jet_eta->at(goodbjet_index[0])};
 				      
 				      TString histonames_of_global_variable[]={"hist_etmiss","hist_mtw"};
-				      TString histonames_of_leadlep_variable[]={"hist_leadleptpt", "hist_leadlepteta","hist_leadleptE","hist_leadleptphi","hist_leadleptch","hist_leadleptID"};
+				      TString histonames_of_leadlep_variable[]={"hist_leadleptpt", "hist_leadlepteta","hist_leadleptE","hist_leadleptphi","hist_leadleptch","hist_leadleptID","hist_leadlepz0","hist_leadlepd0"};
 				      TString histonames_of_jet_variable[]={"hist_n_jets","hist_leadjet_pt","hist_leadjet_eta","hist_n_bjets","hist_leadbjet_pt","hist_leadbjet_eta"};
 				      
 				      int length_global = sizeof(names_of_global_variable)/sizeof(names_of_global_variable[0]);

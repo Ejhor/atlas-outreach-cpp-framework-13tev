@@ -27,3 +27,5 @@ hist_leadTopLRjet_m
 hist_leadTopLRjet_tau32
 hist_leadTopLRjet_syst_pt
 hist_ttbarMLR
+hist_leadlepz0
+hist_leadlepd0
